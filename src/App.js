@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import './App.css';
 import {newsApiKey} from './params.js';
 
-const applyUpdateResult = (result, page) => (prevState) => ({
-  hits: [...prevState.articles, ...result.articles],
+const applyUpdateResult = (previousResult, result, page) => (prevState) => ({
+  hits: previousResult.concat(result.articles),
   page: page,
 });
 
@@ -48,7 +48,7 @@ class App extends Component {
   onSetResult = (result, page) =>
     page === 1
       ? this.setState(applySetResult(result, page))
-      : this.setState(applyUpdateResult(result, page));
+      : this.setState(applyUpdateResult(this.state.hits, result, page));
 
   render() {
     return (

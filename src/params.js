@@ -1,1 +1,1 @@
-export const newsApiKey = //<ADD API KEY HERE>;
+export const newsApiKey = //<INSERT KEY HERE>;
