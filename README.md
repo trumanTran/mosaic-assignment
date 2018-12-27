@@ -14,4 +14,4 @@ You will also see any lint errors in the console.
 
 ## Notes
 
-Before running, please replace <INSERT KEY HERE> in param.js with your API Key from newsapi.org 
+Before running, please replace //`<INSERT KEY HERE>` in param.js with your API Key from newsapi.org 
